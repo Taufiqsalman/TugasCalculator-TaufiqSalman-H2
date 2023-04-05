@@ -23,7 +23,14 @@ numbers.forEach((number) => {
     })
 })
 
-
+const percentage = document.querySelector('.percentage');
+percentage.addEventListener('click', () => {
+    calculatePercentage();
+});
+const calculatePercentage = () => {
+    let result = parseFloat(currentNumber)/100
+    updateScreen(result)
+}
 
 const operators = document.querySelectorAll(".operator")
 operators.forEach((operator) => {
